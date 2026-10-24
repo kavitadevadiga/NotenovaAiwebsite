@@ -1,0 +1,7 @@
+flask
+flask-Cors
+openai
+gunicorn
+Werkzeug 
+pypdf
+python-docx
