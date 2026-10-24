@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoteNova AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- LOGIN PAGE -->
+<section id="loginPage" class="auth-page">
+    <div class="auth-card">
+
+        <div class="logo">
+            ✦ NoteNova <span>AI</span>
+        </div>
+
+        <h1>Welcome Back 👋</h1>
+
+        <p class="auth-subtitle">
+            Sign in to continue to NoteNova AI
+        </p>
+
+        <form id="loginForm">
+            <label for="loginEmail">Email</label>
+            <input
+                type="email"
+                id="loginEmail"
+                placeholder="Enter your email"
+                required
+            >
+
+            <label for="loginPassword">Password</label>
+            <input
+                type="password"
+                id="loginPassword"
+                placeholder="Enter your password"
+                required
+            >
+
+            <button type="submit" class="main-btn">
+                Login
+            </button>
+        </form>
+
+        <p class="bottom-text">
+            Don't have an account?
+            <a href="#" id="showSignup">Create Account</a>
+        </p>
+
+    </div>
+</section>
+
+
+<!-- SIGN UP PAGE -->
+<section id="signupPage" class="auth-page hidden">
+    <div class="auth-card">
+
+        <div class="logo">
+            ✦ NoteNova <span>AI</span>
+        </div>
+
+        <h1>Create Account ✨</h1>
+
+        <p class="auth-subtitle">
+            Start summarizing smarter
+        </p>
+
+        <form id="signupForm">
+            <label for="signupName">Full Name</label>
+            <input
+                type="text"
+                id="signupName"
+                placeholder="Enter your name"
+                required
+            >
+
+            <label for="signupEmail">Email</label>
+            <input
+                type="email"
+                id="signupEmail"
+                placeholder="Enter your email"
+                required
+            >
+
+            <label for="signupPassword">Password</label>
+            <input
+                type="password"
+                id="signupPassword"
+                placeholder="Create a password"
+                required
+            >
+
+            <label for="confirmPassword">Confirm Password</label>
+            <input
+                type="password"
+                id="confirmPassword"
+                placeholder="Confirm your password"
+                required
+            >
+
+            <button type="submit" class="main-btn">
+                Create Account
+            </button>
+        </form>
+
+        <p class="bottom-text">
+            Already have an account?
+            <a href="#" id="showLogin">Login</a>
+        </p>
+
+    </div>
+</section>
+
+
+<!-- DASHBOARD -->
+<section id="dashboardPage" class="dashboard hidden">
+
+    <!-- SIDEBAR -->
+    <aside
+        id="sidebar"
+        class="sidebar"
+        aria-label="Main navigation"
+    >
+
+        <div class="sidebar-logo">
+            <span class="logo-star">✦</span>
+            <span>NoteNova</span>
+            <span class="logo-ai">AI</span>
+        </div>
+
+        <!-- SIDEBAR NAVIGATION -->
+        <nav class="sidebar-nav">
+
+            <a
+                href="#dashboardSection"
+                class="nav-link active"
+                data-section="dashboard"
+            >
+                <span class="nav-icon">🏠</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a
+                href="#notesSection"
+                class="nav-link"
+                data-section="notes"
+            >
+                <span class="nav-icon">📄</span>
+                <span>My Notes</span>
+            </a>
+
+            <a
+                href="#favoritesSection"
+                class="nav-link"
+                data-section="favorites"
+            >
+                <span class="nav-icon">⭐</span>
+                <span>Favorites</span>
+            </a>
+
+            <a
+                href="#settingsSection"
+                class="nav-link"
+                data-section="settings"
+            >
+                <span class="nav-icon">⚙️</span>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+        <!-- LOGOUT -->
+        <div class="sidebar-bottom">
+            <button
+                type="button"
+                id="logoutBtn"
+                class="logout-btn"
+            >
+                <span>↪</span>
+                Logout
+            </button>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN AREA -->
+    <main class="dashboard-main">
+
+        <!-- TOP HEADER -->
+        <header class="topbar">
+
+            <button
+                type="button"
+                id="menuBtn"
+                class="menu-btn"
+                aria-label="Toggle sidebar"
+                aria-controls="sidebar"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="topbar-title">
+                <h2 id="pageTitle">Dashboard</h2>
+                <p id="pageSubtitle">
+                    Welcome back to NoteNova AI 👋
+                </p>
+            </div>
+
+            <!-- USER PROFILE -->
+            <div class="profile">
+                <div id="avatar" class="avatar">U</div>
+
+                <div class="profile-info">
+                    <strong id="userName">User</strong>
+                    <small>Student</small>
+                </div>
+            </div>
+
+        </header>
+
+
+        <!-- DASHBOARD SECTION -->
+        <section id="dashboardSection" class="content-section">
+
+            <div class="welcome-card">
+                <div>
+                    <h1>Turn your notes into knowledge ✨</h1>
+                    <p>
+                        Upload your documents or paste your
+                        notes and let NoteNova AI create
+                        smart summaries.
+                    </p>
+                </div>
+
+                <div class="welcome-icon">🤖</div>
+            </div>
+
+            <!-- SUMMARY WORKSPACE -->
+            <div class="summary-workspace">
+
+                <div class="section-heading">
+                    <h2>Create a Summary</h2>
+                    <p>
+                        Upload a document or paste your notes below.
+                    </p>
+                </div>
+
+                <div class="input-grid">
+
+                    <!-- UPLOAD DOCUMENT -->
+                    <div class="upload-card">
+
+                        <div class="big-icon">📄</div>
+
+                        <h3>Upload Document</h3>
+                        <p>PDF, TXT or DOC files</p>
+
+                        <input
+                            type="file"
+                            id="fileInput"
+                            accept=".pdf,.txt,.doc,.docx"
+                            hidden
+                        >
+
+                        <label for="fileInput" class="upload-button">
+                            Choose File
+                        </label>
+
+                        <p id="fileName" class="file-name">
+                            No file selected
+                        </p>
+
+                        <button
+                            type="button"
+                            id="uploadSummaryBtn"
+                            class="upload-button"
+                            onclick="summarizeUploadedFile()"
+                        >
+                            ✨ Generate Summary
+                        </button>
+
+                    </div>
+
+                    <!-- PASTE NOTES -->
+                    <div class="notes-card">
+
+                        <h3>Paste Your Notes</h3>
+
+                        <textarea
+                            id="notesInput"
+                            placeholder="Paste your notes here..."
+                        ></textarea>
+
+                        <button
+                            type="button"
+                            id="summarizeBtn"
+                            class="main-btn"
+                        >
+                            ✨ Generate Summary
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- AI SUMMARY -->
+            <div class="ai-summary">
+
+                <div class="section-heading">
+                    <h2>AI Summary</h2>
+                    <p>
+                        Your generated summary will appear here.
+                    </p>
+                </div>
+
+                <div id="summaryBox" class="summary-box">
+                    <div class="empty-state">
+                        <div class="empty-icon">✨</div>
+
+                        <h3>No summary yet</h3>
+
+                        <p>
+                            Enter your notes and generate a summary.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- MY NOTES -->
+        <section
+            id="notesSection"
+            class="content-section"
+            style="display: none;"
+        >
+
+            <div class="section-heading">
+                <h1>📄 My Notes</h1>
+                <p>
+                    View and manage your summarized notes.
+                </p>
+            </div>
+
+            <div id="recentNotes" class="recent-grid">
+
+                <div class="note-card">
+                    <div class="note-icon">📘</div>
+
+                    <div>
+                        <h3>Welcome to NoteNova</h3>
+                        <p>Your notes will appear here.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- FAVORITES -->
+        <section
+            id="favoritesSection"
+            class="content-section"
+            style="display: none;"
+        >
+
+            <div class="section-heading">
+                <h1>⭐ Favorites</h1>
+                <p>Your favorite notes and summaries.</p>
+            </div>
+
+            <div class="recent-grid">
+                <div class="note-card">
+                    <div class="note-icon">⭐</div>
+
+                    <div>
+                        <h3>No Favorites Yet</h3>
+                        <p>
+                            Your favorite notes will appear here.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- SETTINGS -->
+        <section
+            id="settingsSection"
+            class="content-section"
+            style="display: none;"
+        >
+
+            <div class="section-heading">
+                <h1>⚙️ Settings</h1>
+                <p>
+                    Manage your NoteNova AI preferences.
+                </p>
+            </div>
+
+            <div class="recent-grid">
+
+                <!-- ACCOUNT -->
+                <div class="note-card">
+                    <div class="note-icon">👤</div>
+
+                    <div>
+                        <h3>Account</h3>
+                        <p>
+                            Manage your account information.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- NOTIFICATIONS -->
+                <div class="note-card">
+                    <div class="note-icon">🔔</div>
+
+                    <div>
+                        <h3>Notifications</h3>
+                        <p>
+                            Manage your notification preferences.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+</section>
+
+
+<!-- JAVASCRIPT -->
+<script src="scriptt.js"></script>
+
+</body>
+</html>
